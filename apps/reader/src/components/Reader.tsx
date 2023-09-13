@@ -260,6 +260,8 @@ function BookPane({ tab, onMouseDown }: BookPaneProps) {
      * according to the latest layout
      */
     rendition?.spread(typography.spread ?? RenditionSpread.Auto)
+    rendition?.setManager('continuous')
+    rendition?.flow('scrolled-continuous')
   }, [typography.spread, rendition])
 
   useEffect(() => applyCustomStyle(), [applyCustomStyle])
@@ -328,9 +330,9 @@ function BookPane({ tab, onMouseDown }: BookPaneProps) {
 
   useEventListener(iframe, 'wheel', (e) => {
     if (e.deltaY < 0) {
-      tab.prev()
+      /* tab.prev() */
     } else {
-      tab.next()
+      /* tab.next() */
     }
   })
 

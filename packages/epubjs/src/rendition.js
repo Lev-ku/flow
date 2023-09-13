@@ -162,7 +162,7 @@ class Rendition {
    * @param {function} manager
    */
   setManager(manager) {
-    this.manager = manager
+    this.settings.manager = manager
   }
 
   /**

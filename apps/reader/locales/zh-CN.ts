@@ -32,6 +32,7 @@ export default {
   'typography.page_view': '视图',
   'typography.page_view.single_page': '单页',
   'typography.page_view.double_page': '双页',
+  'typography.page_view.continuous': '连续的',
   'typography.font_family': '字体',
   'typography.font_size': '字号',
   'typography.font_weight': '字重',

@@ -1,7 +1,7 @@
 import { IS_SERVER } from '@literal-ui/hooks'
 import { atom, AtomEffect, useRecoilState } from 'recoil'
 
-import { RenditionSpread } from '@flow/epubjs/types/rendition'
+import { RenditionSpread, RenditionManager } from '@flow/epubjs/types/rendition'
 
 function localStorageEffect<T>(key: string, defaultValue: T): AtomEffect<T> {
   return ({ setSelf, onSet }) => {
@@ -37,6 +37,7 @@ export interface TypographyConfiguration {
   fontFamily?: string
   lineHeight?: number
   spread?: RenditionSpread
+  manager?: RenditionManager
   zoom?: number
 }
 

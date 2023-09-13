@@ -15,11 +15,16 @@ export enum RenditionSpread {
   Always = 'always',
 }
 
+export enum RenditionManager {
+  Default = 'default',
+  Continuous = 'continuous',
+}
+
 export interface RenditionOptions {
   width?: number | string
   height?: number | string
   ignoreClass?: string
-  manager?: 'default' | 'continuous' | Function | object
+  manager?: string | RenditionManager
   view?: 'iframe' | Function | object
   flow?:
     | 'auto'
@@ -134,7 +139,7 @@ export declare class Rendition {
 
   resize(width?: number, height?: number): void
 
-  setManager(manager: Function): void
+  setManager(manager: string): void
 
   spread(spread: string, min?: number): void
 
